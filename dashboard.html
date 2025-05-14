@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - UMKM GO</title>
+    <link rel="stylesheet" href="css/dasboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">UMKM GO</div>
+            <nav class="menu">
+                <a href="dashboard.html" class="active"><i class="fas fa-home"></i> Beranda</a>
+                <a href="profile.html"><i class="fas fa-user"></i> Profil</a>
+                <a href="pesanan.html"><i class="fas fa-box"></i> Pesanan Saya</a>
+                <a><i class="fas fa-money-check-alt"></i> Transaksi</a>
+                <a href="index.html"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h2 id="greeting">Halo, ...</h2>
+                <div class="header-icons">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="user-role">PELANGGAN</span>
+                </div>
+            </header>
+
+            <!-- Breadcrumb -->
+            <section class="breadcrumb">
+                <h3>Beranda</h3>
+                <p>Beranda</p>
+            </section>
+
+            <!-- Kategori -->
+            <section class="kategori">
+                <button class="active"><i class="fas fa-shirt"></i> Pakaian</button>
+                <button><i class="fas fa-gem"></i> Aksesoris</button>
+                <button><i class="fas fa-paint-brush"></i> Kerajinan Tangan</button>
+                <button><i class="fas fa-ellipsis-h"></i> lainnya</button>
+            </section>
+
+            <!-- Produk -->
+            <section class="produk-list">
+                <div class="produk-card">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-23010-wvf0hs83nwmv6b" alt="Hoodie Pria">
+                    <h4>Hoodie Pria</h4>
+                    <span class="kategori-label">Pakaian</span>
+                    <p class="harga">Rp80.000,-</p>
+                    <p class="ringkasan">Hoodie pria dengan desain simpel, cocok dipakai untuk aktivitas sehari-hari maupun hangout santai.</p>
+                    <button class="btn-beli"><i class="fas fa-cart-plus"></i> Beli Sekarang</button>
+                </div>
+
+                <div class="produk-card">
+                    <img src="https://down-id.img.susercontent.com/file/becf6e097b9acf313421da26c7242c9f" alt="Sweater Rajut Wanita">
+                    <h4>Sweater Rajut Wanita</h4>
+                    <span class="kategori-label">Pakaian</span>
+                    <p class="harga">Rp76.000,-</p>
+                    <p class="ringkasan">Tampil stylish dengan sweater rajut yang dirancang untuk kamu yang ingin tetap modis di cuaca dingin.</p>
+                    <button class="btn-beli"><i class="fas fa-cart-plus"></i> Beli Sekarang</button>
+                </div>
+
+                <div class="produk-card">
+                    <img src="https://cf.shopee.ph/file/b12509df5340bbd6bcfffa2ad48f3110" alt="Hoodie Zipper Unisex">
+                    <h4>Hoodie Zipper Unisex</h4>
+                    <span class="kategori-label">Pakaian</span>
+                    <p class="harga">Rp104.000,-</p>
+                    <p class="ringkasan">Hoodie Zipper ini adalah pilihan sempurna untuk kamu yang suka tampil kasual tapi tetap keren.</p>
+                    <button class="btn-beli"><i class="fas fa-cart-plus"></i> Beli Sekarang</button>
+                </div>
+
+                <div class="produk-card">
+                    <img src="https://cf.shopee.co.id/file/fa68949a1e7329b6cffa479e8d7c78f0" alt="Basic Sweater Polos">
+                    <h4>Basic Sweater Polos</h4>
+                    <span class="kategori-label">Pakaian</span>
+                    <p class="harga">Rp74.000,-</p>
+                    <p class="ringkasan">Sweater polos dengan desain simpel dan nyaman, cocok dipakai sehari-hari.</p>
+                    <button class="btn-beli"><i class="fas fa-cart-plus"></i> Beli Sekarang</button>
+                </div>
+
+                <div class="produk-card">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98r-luiw7vsaz8os96" alt="Crewneck Pria">
+                    <h4>Crewneck Pria</h4>
+                    <span class="kategori-label">Pakaian</span>
+                    <p class="harga">Rp85.000,-</p>
+                    <p class="ringkasan">....</p>
+                    <button class="btn-beli"><i class="fas fa-cart-plus"></i> Beli Sekarang</button>
+                </div>
+
+                <div class="produk-card">
+                    <img src="https://cf.shopee.co.id/file/bbae4424c525b851969cd7c9cd0297ac_tn" alt="Knitted Cardi">
+                    <h4>Knitted Cardi</h4>
+                    <span class="kategori-label">Pakaian</span>
+                    <p class="harga">Rp58.900,-</p>
+                    <p class="ringkasan">Hoodie Zipper ini adalah pilihan sempurna untuk kamu yang suka tampil kasual tapi tetap keren.</p>
+                    <button class="btn-beli"><i class="fas fa-cart-plus"></i> Beli Sekarang</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const username = localStorage.getItem('username') || 'Pengguna';
+        document.getElementById('greeting').textContent = `Halo ${username}!`;
+    </script>
+</body>
+</html>

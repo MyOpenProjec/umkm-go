@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profil</title>
+  <link rel="stylesheet" href="css/profile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script>
+    window.onload = function() {
+      const username = localStorage.getItem("username") || "Pengguna";
+      document.getElementById("username").textContent = username;
+      document.getElementById("header-username").textContent = `Halo ${username}!`;
+    document.querySelector(".username-handle").textContent = username;
+    };
+  </script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="sidebar">
+      <div class="logo">UMKM GO</div>
+      <div class="menu">
+        <a href="dashboard.html"><i class="fas fa-home"></i> Beranda</a>
+        <a href="profil.html" class="active"><i class="fas fa-user"></i> Profil</a>
+        <a href="pesanan.html"><i class="fas fa-box"></i> Pesanan Saya</a>
+        <a href="#"><i class="fas fa-file-invoice"></i> Transaksi</a>
+        <a href="index.html"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="header">
+        <h2 id="header-username">Halo!</h2>
+        <div class="header-icons">
+          <i class="fas fa-search"></i>
+          <i class="fas fa-bell"></i>
+          <i class="fas fa-shopping-cart"></i>
+          <span class="user-role">PELANGGAN</span>
+        </div>
+      </div>
+
+      <div class="breadcrumb">
+        <h3>Profil</h3>
+        <p>Beranda > Profil</p>
+      </div>
+
+      <div class="profil-card">
+        <div class="profil-header">
+          <img src="image/image.png" alt="User Avatar" />
+          <div>
+            <h4 id="username">Nama</h4>
+            <p class="username-handle">HarrisCaine</p>
+          </div>
+        </div>
+        <ul class="profil-menu">
+          <li><a href="informasi.html" class="informasi"><i class="fas fa-user"></i> Informasi pribadi</li></a>
+          <li><i class="fas fa-shopping-cart"></i> Status Pesanan</li>
+          <li><i class="fas fa-comment-dots"></i> Ulasan Saya</li>
+          <li><i class="fas fa-cog"></i> Pengaturan</li>
+          <li><i class="fas fa-file-alt"></i> Syarat & Ketentuan</li>
+          <li><i class="fas fa-question-circle"></i> Bantuan & Dukungan</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

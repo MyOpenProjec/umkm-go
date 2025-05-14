@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f4f9ff;
+}
+
+.dashboard-container {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    border: none;
+    width: 390px;
+    background-color: #3d8bff;
+    color: #07224b;
+    min-height: 110vh;
+    padding-top: 30px;
+    border-top-right-radius: 25px;
+}
+
+.logo {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #081f42;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.menu a i {
+    margin-right: 10px;
+}
+
+.menu a.active,
+.menu a:hover {
+    background-color: #265ecf;
+    border-left: 4px solid white;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px 40px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-icons i {
+    margin: 0 10px;
+    cursor: pointer;
+    color: #1a1a1a;
+}
+
+.user-role {
+    font-weight: bold;
+    color: #0d6efd;
+    margin-left: 10px;
+}
+
+/* Breadcrumb */
+.breadcrumb h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.breadcrumb p {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* Kategori */
+.kategori {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.kategori button {
+    background: white;
+    border: 2px solid #d1e2ff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.kategori button.active,
+.kategori button:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* Produk List */
+.produk-list {
+    display: grid;
+   grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.produk-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.produk-card img {
+    width: 40%;
+    height: 100px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.produk-card h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+
+.kategori-label {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.harga {
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.ringkasan {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.btn-beli {
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: 0.3s;
+    width: 50%;
+}
+
+.btn-beli:hover {
+    background-color: #0056b3;
+}
+
+.header h2{
+  color: #0d6efd;
+}

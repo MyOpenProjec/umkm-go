@@ -1,0 +1,153 @@
+body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e8f0fe;
+    }
+
+    .sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #3d8bff;
+    color: #081f42;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    border-top-right-radius: 25px;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      padding: 12px 20px;
+      color: #081f42;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sidebar a:hover, .sidebar a.active {
+      background-color: #1f4bb6;
+        color: white;
+    }
+
+    .main {
+      margin-left: 200px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+      padding: 20px;
+    }
+
+    .header h1 {
+      color: #1b4db6;
+      font-size: 24px;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 18px;
+      color: #1b4db6;
+    }
+
+    .header-icons span {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .content {
+      padding: 0 20px 20px;
+    }
+
+    .breadcrumb {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .profile-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      max-width: 600px;
+    }
+
+    .profile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .profile-user img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .profile-user-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .edit-btn {
+      font-size: 14px;
+      background-color: #f0f3ff;
+      color: #2d6cdf;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .edit-btn i {
+      margin-right: 5px;
+    }
+
+    .profile-detail {
+      margin-top: 20px;
+    }
+
+    .profile-item {
+      display: flex;
+      align-items: center;
+      margin: 12px 0;
+    }
+
+    .profile-item i {
+      width: 24px;
+      text-align: center;
+      font-size: 18px;
+      color: #1b4db6;
+      margin-right: 10px;
+    }
+
+    .profile-item span {
+      font-weight: bold;
+      display: block;
+    }
+
+    .profile-item div {
+      display: flex;
+      flex-direction: column;
+    }

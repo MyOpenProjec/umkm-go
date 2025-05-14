@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5fe;
+    display: flex;
+    height: 100vh;
+}
+
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left-panel {
+    flex: 1;
+    background-color: #cfe0ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.left-panel .logo {
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+
+.right-panel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 320px;
+
+}
+
+.login-form h2 {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.login-form p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.login-form a {
+    color: #0053d6;
+    text-decoration: none;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-field input {
+    padding-right: 50px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 5px;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 10;
+}
+
+.toggle-password.hide {
+    background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="blue" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>');
+}
+
+.toggle-password.show {
+    background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="blue" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.875 18.825A10.05 10.05 0 0112 19c-5 0-9.27-3.11-11-7 1.053-2.43 3.029-4.449 5.5-5.5M9.88 9.88A3 3 0 1114.12 14.12M9.88 9.88L3 3m6.88 6.88l5.24 5.24M15 15l5 5"></path></svg>');
+}
+
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: 0046c7
+}
+
+.login-form button {
+    width: 30%;
+    padding: 10px;
+    background-color: #0046c7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form .terms {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #0053d6;
+}

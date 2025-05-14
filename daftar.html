@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMKM GO - Daftar</title>
+    <link rel="stylesheet" href="css/daftar.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <img src="image/LOGO BLUE-01.png" alt="UMKM GO Logo" class="logo">
+        </div>
+
+        <div class="right-panel">
+            <div class="login-form">
+                <h2>Daftar Akun</h2>
+                <form id="register-form">
+                    <input type="text" id="username" placeholder="Nama Pengguna" required>
+                    <div class="password-field">
+                        <input type="password" id="password" placeholder="Kata sandi" required>
+                        <span class="toggle-password hide" id="togglePassword"></span>
+                    </div>
+                    <div class="password-field">
+                        <input type="password" id="konfirmasi" placeholder="Konfirmasi Kata Sandi" required>
+                        <span class="toggle-password hide" id="KonfirmasiPassword"></span>
+                    </div>
+                    <p class="password-info">
+                        Minimal 8 karakter dengan setidaknya satu huruf besar, satu huruf kecil, satu karakter khusus, dan satu angka.
+                    </p>
+                    <label class="remember-me">
+                        <input type="checkbox" id="terms"> Dengan mengklik 'Daftar', Anda menyetujui Syarat & Ketentuan situs web kami.
+                    </label>
+                    <button type="submit">DAFTAR</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const passwordInput = document.getElementById('password');
+        const togglePassword = document.getElementById('togglePassword');
+        const konfirmasiInput = document.getElementById('konfirmasi');
+        const toggleKonfirmasiPassword = document.getElementById('KonfirmasiPassword');
+        const registerForm = document.getElementById('register-form');
+
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            togglePassword.classList.toggle('show', type === 'text');
+            togglePassword.classList.toggle('hide', type === 'password');
+        });
+
+        toggleKonfirmasiPassword.addEventListener('click', function () {
+            const type = konfirmasiInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            konfirmasiInput.setAttribute('type', type);
+            toggleKonfirmasiPassword.classList.toggle('show', type === 'text');
+            toggleKonfirmasiPassword.classList.toggle('hide', type === 'password');
+        });
+
+        
+        registerForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const konfirmasi = document.getElementById('konfirmasi').value;
+            const termsAccepted = document.getElementById('terms').checked;
+
+            if (username === "" || password === "" || konfirmasi === "") {
+                alert("Semua kolom harus diisi!");
+                return;
+            }
+
+            if (password !== konfirmasi) {
+                alert("Kata sandi dan konfirmasi kata sandi tidak cocok!");
+                return;
+            }
+
+            if (!termsAccepted) {
+                alert("Anda harus menyetujui Syarat & Ketentuan.");
+                return;
+            }
+
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+
+            alert("Pendaftaran berhasil! Anda telah terdaftar dengan username: " + username);
+
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>
